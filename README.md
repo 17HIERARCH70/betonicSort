@@ -23,13 +23,19 @@ import "github.com/17HIERARCH70/betonicSort"
 ```
 ## Complexity
 
-Let <math>p = \lfloor \log_2 n \rfloor</math> and <math>q = \lceil \log_2 n \rceil</math>.
+In the Bitonic Sort algorithm, let's define:
 
-It is evident from the construction algorithm that the number of rounds of parallel comparisons is given by <math>q(q+1)/2</math>.
+- \( p = \lfloor \log_2 n \rfloor \)
+- \( q = \lceil \log_2 n \rceil \)
 
-It follows that the number of comparators <math>c</math> is bounded <math>2 ^{p-1} \cdot p (p+1) /2 \leq c \leq \lfloor {n/2} \rfloor \cdot q (q+1) /2 </math> (which establishes an exact value for <math>c</math> when <math>n</math> is a power of 2).
+It's evident from the construction algorithm that the number of rounds of parallel comparisons is given by \( \frac{q(q+1)}{2} \).
 
-Although the absolute number of comparisons is typically higher than Batcher's odd-even sort, many of the consecutive operations in a bitonic sort retain a locality of reference, making implementations more cache-friendly and typically more efficient in practice.
+Therefore, the number of comparators \( c \) is bounded by:
+
+\[ 2^{\frac{p-1}{2}} \cdot p(p+1)/2 \leq c \leq \left\lfloor \frac{n}{2} \right\rfloor \cdot q(q+1)/2 \]
+
+This establishes an exact value for \( c \) when \( n \) is a power of 2.
+
 
 ## Performance
 
