@@ -31,7 +31,7 @@ In the Bitonic Sort algorithm, let's define:
 
 It's evident from the construction algorithm that the number of rounds of parallel comparisons is given by $\frac{q(q+1)}{2}$.
 
-Therefore, the number of comparators $$ c $$ is bounded by:
+Therefore, the number of comparators $c$ is bounded by:
 
 $$ 2^{p-1} \cdot p(p+1)/2 \leq c \leq \left\lfloor \frac{n}{2} \right\rfloor \cdot q(q+1)/2 $$
 
