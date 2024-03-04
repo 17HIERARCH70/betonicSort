@@ -21,23 +21,21 @@ or
 ```Go
 import "github.com/17HIERARCH70/betonicSort"
 ```
+
 ## Complexity
 
 In the Bitonic Sort algorithm, let's define:
 
-- \( p = \lfloor \log_2 n \rfloor \)
-- \( q = \lceil \log_2 n \rceil \)
+- $p = \lfloor \log_2 n \rfloor$
+- $q = \lceil \log_2 n \rceil$
 
-It's evident from the construction algorithm that the number of rounds of parallel comparisons is given by \( \frac{q(q+1)}{2} \).
+It's evident from the construction algorithm that the number of rounds of parallel comparisons is given by $\frac{q(q+1)}{2}$.
 
-Therefore, the number of comparators \( c \) is bounded by:
+Therefore, the number of comparators $$ c $$ is bounded by:
 
-\[ 2^{\frac{p-1}{2}} \cdot p(p+1)/2 \leq c \leq \left\lfloor \frac{n}{2} \right\rfloor \cdot q(q+1)/2 \]
+$$ 2^{p-1} \cdot p(p+1)/2 \leq c \leq \left\lfloor \frac{n}{2} \right\rfloor \cdot q(q+1)/2 $$
 
-This establishes an exact value for \( c \) when \( n \) is a power of 2.
+This establishes an exact value for $c$ when $n$ is a power of 2.
 
 
-## Performance
-
-The Betonic Sort algorithm has an average time complexity of O(n^2), where 'n' is the number of elements in the array. While it is not the most efficient sorting algorithm for large datasets, it can be useful for small arrays or educational purposes due to its simplicity.
 
